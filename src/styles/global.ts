@@ -9,6 +9,8 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
   }
 
   a {
