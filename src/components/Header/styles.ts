@@ -51,6 +51,11 @@ export const Menu = styled.ul`
 
 export const NavItem = styled.li`
   text-align: center;
+  border-top: 1px solid ${(props) => props.theme.colors.text};
+
+  &:last-child {
+    border-bottom: 1px solid ${(props) => props.theme.colors.text};
+  }
 `;
 
 export const NavLink = styled.a`

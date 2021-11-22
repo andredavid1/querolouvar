@@ -10,5 +10,7 @@ export const Container = styled.footer`
   span {
     background-color: ${(props) => props.theme.colors.primary};
     color: ${(props) => props.theme.colors.text};
+    font-family: "Quicksand", sans-serif;
+    font-size: small;
   }
 `;

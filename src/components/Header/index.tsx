@@ -48,7 +48,7 @@ const Header: NextPage<IHeaderProps> = ({ toggleTheme }) => {
           </NavItem>
           <NavItem>
             <ToggleContainer>
-              <button type="button" onClick={toggleTheme}>
+              <button type="button" title="Trocar Tema" onClick={toggleTheme}>
                 {title === "dark" ? <FiSun /> : <FiMoon />}
               </button>
             </ToggleContainer>
@@ -56,7 +56,11 @@ const Header: NextPage<IHeaderProps> = ({ toggleTheme }) => {
         </Menu>
       </NavBar>
       <ContainerMenu>
-        <button type="button" onClick={() => setMenuIsOpen(!menuIsOpen)}>
+        <button
+          type="button"
+          title="Trocar Tema"
+          onClick={() => setMenuIsOpen(!menuIsOpen)}
+        >
           <FiMenu />
         </button>
       </ContainerMenu>
