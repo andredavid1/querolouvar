@@ -4,5 +4,11 @@ export const Container = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 5vh;
+  min-height: 6vh;
+  background-color: ${(props) => props.theme.colors.primary};
+
+  span {
+    background-color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.text};
+  }
 `;
