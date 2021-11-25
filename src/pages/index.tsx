@@ -18,10 +18,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
-        <ContainerLeft>
+        <ContainerTopLeft>
           <img src="/images/main01.jpg" alt="imagem de louvor" />
-        </ContainerLeft>
-        <ContainerRight>
+        </ContainerTopLeft>
+        <ContainerBottomRight>
           <Form>
             <Title>Busque o seu momento com Deus</Title>
             <RowForm>
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
               <button type="button">Buscar</button>
             </RowForm>
           </Form>
-        </ContainerRight>
+        </ContainerBottomRight>
       </Container>
     </Layout>
   );
@@ -53,13 +53,13 @@ const Home: NextPage = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
   min-height: calc(84vh - 15px);
 `;
 
-const ContainerLeft = styled.aside`
+const ContainerTopLeft = styled.aside`
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 10px;
   background-color: yellow;
   height: calc(84vh * 0.47);
   border-radius: 10px;
@@ -71,7 +71,7 @@ const ContainerLeft = styled.aside`
   }
 `;
 
-const ContainerRight = styled.aside`
+const ContainerBottomRight = styled.aside`
   display: flex;
   flex-direction: column;
   align-items: center;
