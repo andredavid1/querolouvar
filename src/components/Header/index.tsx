@@ -10,7 +10,7 @@ import {
   NavLink,
   ToggleContainer,
 } from "./styles";
-import { FiMenu, FiMoon, FiSun } from "react-icons/fi";
+import { FiMenu, FiX, FiMoon, FiSun } from "react-icons/fi";
 import { useContext, useState } from "react";
 import { ThemeContext } from "styled-components";
 
@@ -26,7 +26,7 @@ const Header: NextPage<IHeaderProps> = ({ toggleTheme }) => {
     <Container>
       <Brand>
         <Link href="/" passHref>
-          QueroLouvar
+          QueroLouVar
         </Link>
       </Brand>
       <NavBar isOpen={menuIsOpen}>
@@ -61,7 +61,7 @@ const Header: NextPage<IHeaderProps> = ({ toggleTheme }) => {
           title="Trocar Tema"
           onClick={() => setMenuIsOpen(!menuIsOpen)}
         >
-          <FiMenu />
+          {menuIsOpen ? <FiX /> : <FiMenu />}
         </button>
       </ContainerMenu>
     </Container>
