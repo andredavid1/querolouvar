@@ -5,6 +5,7 @@ import Image from "next/image";
 import Head from "next/head";
 import { chooseRamdomImage } from "utils/chooseRamdomImage";
 import styled from "styled-components";
+import { darken, lighten } from "polished";
 
 const Home: NextPage = () => {
   const imageSelected = chooseRamdomImage();
@@ -60,7 +61,7 @@ const ContainerLeft = styled.aside`
   width: 90%;
   margin: 0 auto;
   background-color: yellow;
-  height: calc(84vh * 0.45);
+  height: calc(84vh * 0.47);
   border-radius: 10px;
 
   img {
@@ -75,7 +76,7 @@ const ContainerRight = styled.aside`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(84vh * 0.45);
+  height: calc(84vh * 0.47);
 `;
 
 const Title = styled.h3`
@@ -116,11 +117,21 @@ const RowForm = styled.div`
   button {
     width: 100%;
     margin: 0 auto;
-    margin-top: 25px;
+    margin-top: 20px;
     padding: 10px 0;
-    background-color: ${(props) => props.theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.secondary};
     color: ${(props) => props.theme.colors.text};
+    font-weight: bold;
     border-radius: 10px;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: ${(props) =>
+        props.title === "dark"
+          ? lighten(0.1, props.theme.colors.secondary)
+          : darken(0.1, props.theme.colors.secondary)};
+      color: white;
+    }
   }
 `;
 
