@@ -54,6 +54,12 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: calc(84vh - 15px);
+
+  @media only screen and (min-width: 1025px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const ContainerTopLeft = styled.aside`
@@ -68,6 +74,11 @@ const ContainerTopLeft = styled.aside`
     height: 100%;
     border-radius: 10px;
   }
+
+  @media only screen and (min-width: 1025px) {
+    width: 45%;
+    height: 80vh;
+  }
 `;
 
 const ContainerBottomRight = styled.aside`
@@ -77,8 +88,9 @@ const ContainerBottomRight = styled.aside`
   justify-content: center;
   height: calc(84vh * 0.47);
 
-  @media only screen and (min-width: 801px) {
-    background-color: green;
+  @media only screen and (min-width: 1025px) {
+    width: 45%;
+    height: 80vh;
   }
 `;
 
@@ -86,11 +98,13 @@ const Title = styled.h3`
   font-family: "PoppinsBold", sans-serif;
   text-transform: uppercase;
   margin-bottom: 25px;
+  text-align: center;
 `;
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 90%;
   border: 1px solid ${(props) => props.theme.colors.text};
   border-radius: 10px;
@@ -103,6 +117,8 @@ const RowForm = styled.div`
   flex: 1;
   padding: 2px;
   margin-bottom: 5px;
+  width: 100%;
+  max-width: 400px;
 
   label {
     padding-right: 5px;
