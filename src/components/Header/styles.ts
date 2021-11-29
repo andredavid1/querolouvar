@@ -7,6 +7,10 @@ export const Container = styled.header`
   grid-template-areas:
     "logo btnMenu"
     "menu menu";
+
+  @media only screen and (min-width: 801px) {
+    grid-template-areas: "logo menu";
+  }
 `;
 
 export const Brand = styled.div`
@@ -42,11 +46,33 @@ export const NavBar = styled.nav<INavBarProps>`
     props.theme.title === "dark"
       ? lighten(0.02, props.theme.colors.primary)
       : darken(0.02, props.theme.colors.primary)};
+
+  @media only screen and (min-width: 801px) {
+    background-color: ${(props) => props.theme.colors.primary};
+    display: flex;
+    justify-content: flex-end;
+  }
 `;
 
 export const Menu = styled.ul`
   list-style: none;
   width: 100%;
+
+  @media only screen and (min-width: 600px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid ${(props) => props.theme.colors.text};
+    border-bottom: 1px solid ${(props) => props.theme.colors.text};
+    padding: 0 10px;
+  }
+
+  @media only screen and (min-width: 801px) {
+    background-color: ${(props) => props.theme.colors.primary};
+    height: 100%;
+    border: none;
+    padding: 0;
+  }
 `;
 
 export const NavItem = styled.li`
@@ -55,6 +81,32 @@ export const NavItem = styled.li`
 
   &:last-child {
     border-bottom: 1px solid ${(props) => props.theme.colors.text};
+  }
+
+  @media only screen and (min-width: 600px) {
+    border: none;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  @media only screen and (min-width: 801px) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+
+    &:hover {
+      background: ${(props) =>
+        props.theme.title === "dark"
+          ? lighten(0.04, props.theme.colors.primary)
+          : darken(0.04, props.theme.colors.primary)};
+    }
   }
 `;
 
@@ -73,6 +125,17 @@ export const NavLink = styled.a`
       props.theme.title === "dark"
         ? lighten(0.04, props.theme.colors.primary)
         : darken(0.04, props.theme.colors.primary)};
+  }
+
+  @media only screen and (min-width: 801px) {
+    transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+
+    &:hover {
+      background-color: unset;
+    }
   }
 `;
 
@@ -103,6 +166,19 @@ export const ToggleContainer = styled.div`
       color: ${(props) => props.theme.colors.text};
     }
   }
+
+  @media only screen and (min-width: 801px) {
+    button {
+      transition: none;
+      -moz-transition: none;
+      -o-transition: none;
+      -webkit-transition: none;
+
+      &:hover {
+        background-color: unset;
+      }
+    }
+  }
 `;
 
 export const ContainerMenu = styled.div`
@@ -129,5 +205,9 @@ export const ContainerMenu = styled.div`
         transform: scale(1.05);
       }
     }
+  }
+
+  @media only screen and (min-width: 801px) {
+    display: none;
   }
 `;

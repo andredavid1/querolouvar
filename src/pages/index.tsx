@@ -60,7 +60,6 @@ const ContainerTopLeft = styled.aside`
   width: 90%;
   margin: 0 auto;
   margin-bottom: 10px;
-  background-color: yellow;
   height: calc(84vh * 0.47);
   border-radius: 10px;
 
@@ -77,6 +76,10 @@ const ContainerBottomRight = styled.aside`
   align-items: center;
   justify-content: center;
   height: calc(84vh * 0.47);
+
+  @media only screen and (min-width: 801px) {
+    background-color: green;
+  }
 `;
 
 const Title = styled.h3`
