@@ -73,10 +73,11 @@ const ContainerTopLeft = styled.aside`
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    margin-top: 5px;
   }
 
   @media only screen and (min-width: 1025px) {
-    width: 45%;
+    width: 48%;
     height: 80vh;
   }
 `;
@@ -89,7 +90,7 @@ const ContainerBottomRight = styled.aside`
   height: calc(84vh * 0.47);
 
   @media only screen and (min-width: 1025px) {
-    width: 45%;
+    width: 48%;
     height: 80vh;
   }
 `;
