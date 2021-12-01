@@ -9,7 +9,7 @@ import { darken, lighten } from "polished";
 
 const Home: NextPage = () => {
   const imageSelected = chooseRamdomImage();
-  console.log(imageSelected);
+
   return (
     <Layout>
       <Head>
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       </Head>
       <Container>
         <ContainerTopLeft>
-          <img src="/images/main01.jpg" alt="imagem de louvor" />
+          <img src={`${imageSelected}`} alt="imagem de louvor" />
         </ContainerTopLeft>
         <ContainerBottomRight>
           <Form>
